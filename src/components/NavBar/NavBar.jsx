@@ -9,6 +9,7 @@ import {
 
 export const NavBar = () => {
   const flexBetween = "flex justify-between items-center";
+  const flexStart = "flex justify-start items-center";
   return (
     <nav>
       <div className={`${flexBetween} fixed top-0 w-full py-6 bg-primary-300`}>
@@ -19,15 +20,19 @@ export const NavBar = () => {
               <AcademicCapIcon className="h-6 w-6" />
               <p className="font-bold text-2xl">ADMISSIONS </p>
             </div>
-            <div>
-              <div className={`${flexBetween} gap-8 justify-start text-lg`}>
-                <p>Home</p>
-                <p>Courses</p>
-                <p>My Learning</p>
+            <div className={`${flexBetween} w-full`}>
+              <div className={`${flexBetween} gap-16 text-lg`}>
+                <Link to="/">Home</Link>
+                <Link to="/courses">Courses</Link>
+                <Link to="/my-learning">My Learning</Link>
               </div>
-              <div className={`${flexBetween} gap-8 justify-end`}>
-                <UserCircleIcon className="h-6 w-6" />
-                <Cog6ToothIcon className="h-6 w-6" />
+              <div className={`${flexBetween} gap-8`}>
+                <Link to="/profile">
+                  <UserCircleIcon className="h-6 w-6" />
+                </Link>
+                <Link to="/settings">
+                  <Cog6ToothIcon className="h-6 w-6" />
+                </Link>
               </div>
             </div>
           </div>
