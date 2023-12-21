@@ -8,6 +8,8 @@ import { MyLearning } from "./pages/MyLearning/MyLearning";
 import { Profile } from "./pages/Profile/Profile";
 import { Sttngs } from "./pages/Sttngs/Sttngs";
 import { NotFound } from "./pages/NotFound/NotFound";
+import { Register } from "./pages/Register/Register";
+import { Login } from "./pages/Login/Login";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/my-learning" element={<MyLearning />} />
         <Route path="/profile" element={<Profile />} />

@@ -1,5 +1,5 @@
 import React from "react";
 
 export const MyLearning = () => {
-  return <div>MyLearning</div>;
+  return <div className="mt-24">MyLearning</div>;
 };
