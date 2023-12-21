@@ -1,9 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const Login = () => {
+  const { login } = useContext(AuthContext);
+
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +20,7 @@ export const Login = () => {
     axios.post("http://localhost:9001/login", user).then((res) => {
       if (res.data === "Login successful") {
         // localStorage.setItem("token", res.data.token);
+        login();
         navigate("/");
       } else if (res.data === "Invalid email or password") {
         setErrorMessage("Invalid email or password");
@@ -56,7 +60,7 @@ export const Login = () => {
           )}
           <button
             type="submit"
-            className="w-52 bg-secondary-400 shadow-2xl rounded-md h-8 mt-6"
+            className="w-52 bg-secondary-500 rounded-md h-8 mt-6"
           >
             Login
           </button>
