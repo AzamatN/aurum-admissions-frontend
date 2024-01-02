@@ -13,6 +13,7 @@ export const Register = () => {
   let user = { email, fullName, password };
   const registerUser = async (e) => {
     e.preventDefault();
+    // change here as well
     await axios.post("http://localhost:9001/register", user);
     navigate("/");
     // try {

@@ -10,6 +10,8 @@ export const Courses = () => {
     getCourses();
   }, []);
 
+  //change here
+
   const getCourses = () => {
     axios.get("http://localhost:9001/courses").then((response) => {
       // handle success
