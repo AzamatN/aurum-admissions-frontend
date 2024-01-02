@@ -13,7 +13,7 @@ export const Courses = () => {
   //change here
 
   const getCourses = () => {
-    axios.get("http://localhost:9001/courses").then((response) => {
+    axios.get("http://localhost:8001/courses").then((response) => {
       // handle success
       setCourses(response.data);
     });

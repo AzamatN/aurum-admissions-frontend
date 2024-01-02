@@ -19,7 +19,7 @@ export const Home = () => {
   }, []);
 
   const getCourses = () => {
-    axios.get("http://localhost:9001/courses").then((response) => {
+    axios.get("http://localhost:8001/courses").then((response) => {
       // handle success
       setCourses(response.data);
     });
@@ -66,7 +66,7 @@ export const Home = () => {
       </div>
       <div className="w-3/4 mx-auto mt-10">
         <p className="text-start text-3xl">Start New Course</p>
-        <div className="flex mt-12 items-center">
+        <div className="flex mt-12 items-start">
           {courses.slice(0, 3).map((item) => (
             <CourseCard course={item} />
           ))}
