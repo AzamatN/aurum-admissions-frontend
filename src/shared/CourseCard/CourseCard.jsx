@@ -1,6 +1,8 @@
 import React from "react";
 
 const CourseCard = ({ course }) => {
+  // CHANGE HERE AS WELL
+  // DATA FOR COURSE IS CHANGED
   const { title, description, price } = course;
 
   return (
