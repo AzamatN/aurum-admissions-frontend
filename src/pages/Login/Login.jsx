@@ -24,14 +24,8 @@ export const Login = () => {
       } else {
         setErrorMessage("Invalid email or password");
       }
-      // if (res.status === "Login successful") {
-      //   // localStorage.setItem("token", res.data.token);
-      //   login();
-      //   navigate("/");
-      // } else if (res.data === "Invalid email or password") {
-      //   setErrorMessage("Invalid email or password");
-      // }
-      // change here as well
+      //change in future stuff like
+      //error handling (401)
     });
   };
   return (

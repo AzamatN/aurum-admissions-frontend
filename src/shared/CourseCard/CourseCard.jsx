@@ -1,9 +1,7 @@
 import React from "react";
 
 const CourseCard = ({ course }) => {
-  // CHANGE HERE AS WELL
-  // DATA FOR COURSE IS CHANGED
-  const { title, description, price } = course;
+  const { title, description, price, mentor } = course;
 
   return (
     <div className="flex-row mx-auto justify-center">
@@ -15,7 +13,7 @@ const CourseCard = ({ course }) => {
         <div class="w-px bg-gradient-yellowred justify-start mr-3"></div>
         <div className="flex justify-start items-center">
           <p className="w-2/6 text-2xl font-montserrat text-red-500">
-            {price}HKD
+            {price}KZT
           </p>
         </div>
       </div>

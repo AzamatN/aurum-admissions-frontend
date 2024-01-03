@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CourseCard from "../../shared/CourseCard/CourseCard";
+import CourseCardMain from "../../shared/CourseCardMain/CourseCardMain";
 
 export const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -31,9 +32,10 @@ export const Courses = () => {
         <br />
         <br />
         <br />
-        <div className="mt-12 items-center justify-between grid grid-cols-3 gap-12">
+        <div className="mt-12 items-center justify-between grid gap-12">
           {courses.map((item) => (
-            <CourseCard className="" course={item} />
+            // <CourseCard className="" course={item} />
+            <CourseCardMain className="" course={item} />
           ))}
         </div>
       </div>
