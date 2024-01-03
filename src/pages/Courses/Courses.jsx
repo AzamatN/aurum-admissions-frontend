@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import CourseCard from "../../shared/CourseCard/CourseCard";
 import CourseCardMain from "../../shared/CourseCardMain/CourseCardMain";
+import { Link } from "react-router-dom";
 
 export const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -35,7 +36,9 @@ export const Courses = () => {
         <div className="mt-12 items-center justify-between grid gap-12">
           {courses.map((item) => (
             // <CourseCard className="" course={item} />
-            <CourseCardMain className="" course={item} />
+            <Link to="/course/:">
+              <CourseCardMain className="" course={item} />
+            </Link>
           ))}
         </div>
       </div>

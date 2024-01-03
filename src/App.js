@@ -10,6 +10,7 @@ import { Profile } from "./pages/Profile/Profile";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { Register } from "./pages/Register/Register";
 import { Login } from "./pages/Login/Login";
+import { CoursePage } from "./pages/CoursePage/CoursePage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/my-learning" element={<MyLearning />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/courses/:courseId" element={<CoursePage />} />
         </Routes>
       </AuthProvider>
     </div>
