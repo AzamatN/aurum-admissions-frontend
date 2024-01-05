@@ -18,6 +18,7 @@ export const Courses = () => {
     axios.get("http://localhost:8001/courses").then((response) => {
       // handle success
       setCourses(response.data);
+      // console.log(response.data);
     });
     // .catch((error) => {
     //   // handle error
@@ -36,7 +37,8 @@ export const Courses = () => {
         <div className="mt-12 items-center justify-between grid gap-12">
           {courses.map((item) => (
             // <CourseCard className="" course={item} />
-            <Link to="/course/:">
+            //please check this place and do dynamic routing
+            <Link to={`/course/${item.courseId}`}>
               <CourseCardMain className="" course={item} />
             </Link>
           ))}
